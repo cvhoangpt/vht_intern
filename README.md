@@ -1,6 +1,7 @@
 ##### VHT Internship
 #### Create by hoangcv
 *This project contains some excercises and spring boot basic which is the technical internship at VHT.*
+**_You should not re-upload to your git or anywhere you know_**
 
 To clone this project, use `git clone https://github.com/cvhoangpt/vht_intern.git`.
 
