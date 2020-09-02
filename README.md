@@ -1,4 +1,3 @@
 # vht_intern
-Belongs to the technical internship subject at VHT. Create by hoangcv
-
-This project include Java Core and Spring Boot basic
+# Create by hoangcv
+This project contains some excercises and spring boot basic which is the technical internship at VHT.
