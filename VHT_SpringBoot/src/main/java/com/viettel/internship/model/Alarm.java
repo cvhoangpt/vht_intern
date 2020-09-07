@@ -6,6 +6,9 @@
 package com.viettel.internship.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -30,18 +33,23 @@ public class Alarm implements Serializable {
 	
 	@Column(name = "alarmid")
 	@JsonProperty("keyrecog")
+	@NotNull
 	private int alarmid;
 	
 	@Column(name = "keygen")
 	@JsonProperty("keygen")
+	@NotNull
 	private String keygen;
 	
 	@Column(name = "message")
 	@JsonProperty("msg")
 	private String message;
 	
+	@NotNull
+	@CreationTimestamp
 	private Date createTime;
 	
+	@NotNull
 	private int repeatCount = 0;
 	
 	public Alarm() {
