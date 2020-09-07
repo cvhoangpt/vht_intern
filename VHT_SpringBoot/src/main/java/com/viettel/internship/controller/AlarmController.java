@@ -63,8 +63,7 @@ public class AlarmController   {
 	//ResponseEntity<?>
 	//return new ResponseEntity<>(RestModel, HttpStatus.OK);
 	@RequestMapping(value = "/alarm", method = RequestMethod.POST)
-	public ResponseEntity<?> createAlarm(@RequestBody Map<String, String> getJson, 
-			HttpServletResponse response) 
+	public ResponseEntity<?> createAlarm(@RequestBody Map<String, String> getJson) 
 			throws Exception {
 		
 		String type;
@@ -78,7 +77,6 @@ public class AlarmController   {
 		alarmid = Integer.parseInt(getJson.get("keyrecog"));
 		keygen = getJson.get("keygen");
 		message = getJson.get("msg");
-		
 		
 		if (type.equals("1")) {
 			System.out.println("1");
@@ -96,7 +94,6 @@ public class AlarmController   {
 					e.printStackTrace();
 				}
 				
-				
 			} else {
 				//Construction complete!
 				try {
@@ -112,6 +109,7 @@ public class AlarmController   {
 			
 		} else if (type.equals("0")) {
 			System.out.println("0");
+			
 			try {
 				alarmService.deleteRow(alarmid, keygen);
 				return ResponseEntity.status(HttpStatus.OK).body("Delete alarmid=" + alarmid + ", keygen=" + keygen + " successful.");
@@ -122,6 +120,7 @@ public class AlarmController   {
 		}
 		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Something wrong.");
+		
 		//System.out.println(payload);
 		
 		//System.out.println(payload.get("type"));
