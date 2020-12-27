@@ -1,5 +1,5 @@
 ##### VHT Internship
-#### Create by hoangcv
+#### Created by hoangcv
 *This project contains some excercises and spring boot basic which is the technical internship at VHT.*
 **_You should not re-upload to your git or anywhere you know._**
 
